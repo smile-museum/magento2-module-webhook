@@ -1,0 +1,45 @@
+<?xml version="1.0"?>
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../../../../../lib/internal/Magento/Framework/View/Layout/etc/page_configuration.xsd">
+    <body>
+        <referenceBlock name="adminhtml.system.webhook.grid.container">
+            <block class="Magento\Backend\Block\Widget\Grid" name="adminhtml.system.webhook.grid" as="grid">
+                <arguments>
+                    <argument name="id" xsi:type="string">webhooksGrid</argument>
+                    <argument name="dataSource" xsi:type="object">SweetTooth\Webhook\Model\Resource\Webhook\Collection</argument>
+                    <argument name="default_sort" xsi:type="string">webhook_id</argument>
+                    <argument name="default_dir" xsi:type="string">ASC</argument>
+                </arguments>
+                <block class="Magento\Backend\Block\Widget\Grid\ColumnSet" name="adminhtml.system.webhook.grid.columnSet" as="grid.columnSet">
+                    <arguments>
+                        <argument name="rowUrl" xsi:type="array">
+                            <item name="path" xsi:type="string">adminhtml/*/edit</item>
+                            <item name="extraParamsTemplate" xsi:type="array">
+                                <item name="webhook_id" xsi:type="string">getId</item>
+                            </item>
+                        </argument>
+                    </arguments>
+                    <block class="Magento\Backend\Block\Widget\Grid\Column" as="webhook_id">
+                        <arguments>
+                            <argument name="header" xsi:type="string" translate="true">Webhook ID</argument>
+                            <argument name="index" xsi:type="string">webhook_id</argument>
+                            <argument name="column_css_class" xsi:type="string">col-id</argument>
+                            <argument name="header_css_class" xsi:type="string">col-id</argument>
+                        </arguments>
+                    </block>
+                    <block class="Magento\Backend\Block\Widget\Grid\Column" as="event">
+                        <arguments>
+                            <argument name="header" xsi:type="string" translate="true">Event</argument>
+                            <argument name="index" xsi:type="string">event</argument>
+                        </arguments>
+                    </block>
+                    <block class="Magento\Backend\Block\Widget\Grid\Column" as="url">
+                        <arguments>
+                            <argument name="header" xsi:type="string" translate="true">Url</argument>
+                            <argument name="index" xsi:type="string">url</argument>
+                        </arguments>
+                    </block>
+                </block>
+            </block>
+        </referenceBlock>
+    </body>
+</page>

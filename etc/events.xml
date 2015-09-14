@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../../../lib/internal/Magento/Framework/Event/etc/events.xsd">
+    <event name="customer_load_after">
+        <observer name="customer_load_after_sweettooth_webhook_observer" instance="SweetTooth\Webhook\Model\Observer\Customer\Load" method="dispatch" />
+    </event>
+    <event name="customer_save_after">
+        <observer name="customer_save_after_sweettooth_webhook_observer" instance="SweetTooth\Webhook\Model\Observer\Customer\Save" method="dispatch" />
+    </event>
+    <event name="customer_delete_after">
+        <observer name="customer_delete_after_sweettooth_webhook_observer" instance="SweetTooth\Webhook\Model\Observer\Customer\Delete" method="dispatch" />
+    </event>
+</config>

@@ -1,0 +1,6 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../Backend/etc/menu.xsd">
+    <menu>
+        <add id="SweetTooth_Webhook::system_webhook" title="Webhooks" module="SweetTooth_Webhook" sortOrder="20" parent="Magento_Backend::system_other_settings" action="adminhtml/system_webhook" resource="SweetTooth_Webhook::webhook"/>
+    </menu>
+</config>
