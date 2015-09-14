@@ -10,8 +10,7 @@
     },
     "type": "magento2-module",
     "version": "0.1.0",
-    "license": [
-    ],
+    "license": "MIT",
     "extra": {
         "map": [
             [
