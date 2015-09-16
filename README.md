@@ -2,6 +2,8 @@
 
 # Webhooks for Magento 2
 
+![Preview](https://s3.amazonaws.com/sweettooth-static/github/magento2-webhook-preview)
+
 This module provides webhooks for Magento 2 events. More to come soon! Contributors welcome!
 
 ## Getting Started
