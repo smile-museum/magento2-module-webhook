@@ -50,7 +50,7 @@ TODO
 
 ## Roadmap and areas for discussion
 
-### Async webhooks
+### Async webhooks [(RFC)](https://github.com/sweettooth/magento2-module-webhook/issues/6)
 Without async webhooks, this module is pretty much a no-go for production shops - the dependency on third party systems is just too risky to do syncronously. The best practice for performing tasks asynchronously is to queue it up on a memory store (redis, memcache, etc) and have a background worker pick up the job and perform it, meanwhile the syncronous request returns imediately. Since there's no native queueing for Magento 2, our best bet might be to use the database as a 'queue' ("Blasphemy!" you say. Chill, magento already does this in the newsletter module) then use the cron to pick up the jobs every minute.
 
 ### Serialization
