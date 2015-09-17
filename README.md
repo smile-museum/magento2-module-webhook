@@ -4,7 +4,11 @@
 
 ![Preview](https://s3.amazonaws.com/sweettooth-static/github/magento2-webhook-preview)
 
-This module provides webhooks for Magento 2 events. More to come soon! Contributors welcome!
+This module provides webhooks for Magento 2 events. Inspired by [Alan Kent's](https://twitter.com/akent99)'s [Webhooks in Magento 2](http://alankent.me/2015/05/13/webhooks-in-magento-2/) blog post which mentions a rough timeline for getting webhooks in Magento 2 core:
+
+> Better support for webhooks is on the backlog, but currently not guaranteed for Magento 2 GA.
+
+I'm hopeful the community can help push this effort forward through this module.
 
 ## Getting Started
 
