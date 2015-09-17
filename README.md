@@ -37,16 +37,16 @@ php bin/magento setup:upgrade
 Available now
 - Customer updated
 - Customer deleted
+- Order updated
+- Order deleted
+- Product updated
+- Product deleted
 
 TODO
 - Customer created
 - Order created
-- Order updated
-- Order deleted
 - Product created
-- Product updated
-- Product deleted
-- etc
+- CRUD operations for other resources
 
 ## Roadmap and areas for discussion
 
