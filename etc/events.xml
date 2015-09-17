@@ -6,4 +6,10 @@
     <event name="customer_delete_after">
         <observer name="customer_delete_after_sweettooth_webhook_observer" instance="SweetTooth\Webhook\Model\Observer\Customer\Delete" method="dispatch" />
     </event>
+    <event name="catalog_product_save_after">
+        <observer name="product_save_after_sweettooth_webhook_observer" instance="SweetTooth\Webhook\Model\Observer\Product\Save" method="dispatch" />
+    </event>
+    <event name="catalog_product_delete_after">
+        <observer name="product_delete_after_sweettooth_webhook_observer" instance="SweetTooth\Webhook\Model\Observer\Product\Delete" method="dispatch" />
+    </event>
 </config>
