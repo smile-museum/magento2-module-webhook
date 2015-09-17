@@ -51,6 +51,8 @@ class Form extends \Magento\Backend\Block\Widget\Form\Generic
                     'customer_delete_after' => 'Customer Deleted',
                     'product_save_after' => 'Product Updated', 
                     'product_delete_after' => 'Product Deleted',
+                    'order_save_after' => 'Order Updated', 
+                    'order_delete_after' => 'Order Deleted',
                 ]
             ]
         );
