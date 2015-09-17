@@ -47,12 +47,12 @@ class Form extends \Magento\Backend\Block\Widget\Form\Generic
                  * to a shared location so it can be used elsewhere
                  */
                 'options' => [
-                    'customer_save_after' => 'Customer Updated', 
-                    'customer_delete_after' => 'Customer Deleted',
-                    'product_save_after' => 'Product Updated', 
-                    'product_delete_after' => 'Product Deleted',
-                    'order_save_after' => 'Order Updated', 
-                    'order_delete_after' => 'Order Deleted',
+                    'customer/saved' => 'Customer Updated', 
+                    'customer/deleted' => 'Customer Deleted',
+                    'product/saved' => 'Product Updated', 
+                    'product/deleted' => 'Product Deleted',
+                    'order/saved' => 'Order Updated', 
+                    'order/deleted' => 'Order Deleted',
                 ]
             ]
         );

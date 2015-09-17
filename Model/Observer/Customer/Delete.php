@@ -11,7 +11,7 @@ class Delete extends \SweetTooth\Webhook\Model\Observer\WebhookAbstract
 {
     protected function _getWebhookEvent()
     {
-        return 'customer_delete_after';
+        return 'customer/deleted';
     }
 
     protected function _getWebhookData(Observer $observer)

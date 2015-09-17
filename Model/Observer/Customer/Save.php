@@ -11,7 +11,7 @@ class Save extends \SweetTooth\Webhook\Model\Observer\WebhookAbstract
 {
     protected function _getWebhookEvent()
     {
-        return 'customer_save_after';
+        return 'customer/updated';
     }
 
     protected function _getWebhookData(Observer $observer)
