@@ -7,16 +7,29 @@ use Magento\Framework\Event\Observer;
 /**
  * Class Customer
  */
-class Save extends \SweetTooth\Webhook\Model\Observer\WebhookAbstract
+class Create extends \SweetTooth\Webhook\Model\Observer\WebhookAbstract
 {
+    /**
+     * We override the dispatch function to check if the object in the
+     * observer is a new object. If it isn't we make this a noop.
+     */
     public function dispatch(Observer $observer)
     {
+        $customer = $observer->getEvent()->getCustomer();
+
+        /**
+         * Return early if the object isn't new
+         */
+        if (!$customer->getIsObject()) {
+            return $this;
+        }
+
         return parent::dispatch($observer);
     }
 
     protected function _getWebhookEvent()
     {
-        return 'customer_save_after';
+        return 'customer_create_after';
     }
 
     protected function _getWebhookData(Observer $observer)

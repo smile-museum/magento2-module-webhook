@@ -1,6 +1,7 @@
 <?xml version="1.0"?>
 <config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../../../lib/internal/Magento/Framework/Event/etc/events.xsd">
     <event name="customer_save_after">
+        <observer name="customer_create_after_sweettooth_webhook_observer" instance="SweetTooth\Webhook\Model\Observer\Customer\Create" method="dispatch" />
         <observer name="customer_save_after_sweettooth_webhook_observer" instance="SweetTooth\Webhook\Model\Observer\Customer\Save" method="dispatch" />
     </event>
     <event name="customer_delete_after">

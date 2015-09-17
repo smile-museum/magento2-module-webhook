@@ -47,6 +47,7 @@ class Form extends \Magento\Backend\Block\Widget\Form\Generic
                  * to a shared location so it can be used elsewhere
                  */
                 'options' => [
+                    'customer_create_after' => 'Customer Created', 
                     'customer_save_after' => 'Customer Updated', 
                     'customer_delete_after' => 'Customer Deleted',
                 ]
