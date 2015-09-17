@@ -32,7 +32,7 @@ Run database migrations
 php bin/magento setup:upgrade
 ```
 
-## Available Webhooks
+## Supported Webhooks
 
 Available now
 - Customer updated
