@@ -7,7 +7,7 @@ use Magento\Framework\Event\Observer;
 /**
  * Class Customer
  */
-class Load extends \SweetTooth\Webhook\Model\Observer\WebhookAbstract
+class Save extends \SweetTooth\Webhook\Model\Observer\WebhookAbstract
 {
     protected function _getWebhookEvent()
     {
