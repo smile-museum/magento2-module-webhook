@@ -8,7 +8,7 @@ This module provides webhooks for Magento 2 events. Inspired by [Alan Kent's](ht
 
 > Better support for webhooks is on the backlog, but currently not guaranteed for Magento 2 GA.
 
-I'm hopeful the community can help push this effort forward through this module.
+We're hopeful the community can help push this effort forward through this module.
 
 ## Getting Started
 
@@ -57,7 +57,7 @@ TODO
 ### Async webhooks [(RFC)](https://github.com/sweettooth/magento2-module-webhook/issues/6)
 Without async webhooks, this module is pretty much a no-go for production shops - the dependency on third party systems is just too risky to do synchronously. The best practice for performing tasks asynchronously is to queue it up on a memory store (redis, memcache, etc) and have a background worker pick up the job and perform it, meanwhile the synchronous request returns immediately. Since there's no native queueing for Magento 2, our best bet might be to use the database as a 'queue' ("Blasphemy!" you say. Chill, magento already does this in the newsletter module) then use the cron to pick up the jobs every minute.
 
-### Serialization
+### Serialization [(RFC)](https://github.com/sweettooth/magento2-module-webhook/issues/7)
 Right now serializing the payload of the webhook is super basic, just calling `getData()` on the model. This is all kinds of bad because it will expose sensitive information like password hashes and such. A better strategy would be to create a serializer for each resource. An even better strategy is if we could re-use the serializer for the REST API so our webhook data has an identical json structure to the API. Boom.
 
 ### Extensibility
